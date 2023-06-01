@@ -17,6 +17,8 @@ var btn0 = document.getElementById('btn0');
 var esign = document.getElementById('esign');
 var cleara = document.getElementById('cleara');
 var multi= document.getElementById('multi');
+var dec = document.getElementById('dec');
+var divide=document.getElementById('divide');
 
 // Add event listeners to the button elements
 btn7.addEventListener('click', addToScreen);
@@ -34,6 +36,8 @@ btn0.addEventListener('click', addToScreen);
 esign.addEventListener('click', evaluateExpression);
 cleara.addEventListener('click', clearScreen);
 multi.addEventListener('click', addToScreen);
+dec.addEventListener('click',addToScreen);
+divide.addEventListener('click',addToScreen)
 
 //function to clear the screen
 function clearScreen() {
@@ -49,6 +53,21 @@ function addToScreen(event) {
 // Function to evaluate the expression and display the result
 function evaluateExpression() {
   var expression = screen.value;
+  let myRegex = /(\.\d*){2}/;
+
+  if (myRegex.test(expression)) {
+    screen.value = "NO DOUBLE '..'";
+    return;
+  }
+
   var result = eval(expression);
   screen.value = result;
+}
+
+//not two decimal places  after each other
+let ddec = screen.value;
+let myRegex = /../;
+
+if (myRegex.test(ddec) === true) {
+  screen.value = "not allowed";
 }
