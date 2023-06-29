@@ -1,0 +1,25 @@
+
+  /*Login box */
+#loginbox {background-color: rgb(7, 75, 121);
+    height:500px;
+    width: 400px; border-radius: 30px;
+;}
+#loginbox im{position: absolute;
+    width: 100%;
+    height: :100%;
+    object-fit:cover;}
+
+body {background-color: rgb(196, 196, 196);}
+
+
+    /*Aligning the login box */
+#alignlog {display: flex;
+     justify-content: center;
+    }
+
+
+    #input {padding-left: 100px;
+        padding-top: 200px;}
+
+#inputd {height: 30px;}
+
